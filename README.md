@@ -1,2 +1,3 @@
 # slyz_project
-A simple tool for students to manage PCs easily.
+A open-sourced project by students, aiming to serve students.
+[胜利第一中学 | 诚勤立达](http://www.sldyzx.cn)
