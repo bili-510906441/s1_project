@@ -1,5 +1,5 @@
 # slyz_project
-A open-sourced project by students, aiming to serve students.
+An open-sourced project by students, aiming to serve students.
 
 All codes are written in Python [(Website)](https://www.python.org) / [(Github)](https://github.com/python/cpython).
 
