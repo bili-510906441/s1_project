@@ -1,4 +1,4 @@
-# slyz_project
+# s1_project
 An open-sourced project by students, aiming to serve students.
 
 All codes are written in Python [(Website)](https://www.python.org) / [(Github)](https://github.com/python/cpython).
