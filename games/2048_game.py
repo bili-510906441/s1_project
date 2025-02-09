@@ -5,7 +5,7 @@ import random
 class Game2048:
     def __init__(self, root):
         self.root = root
-        self.root.title("2048")
+        self.root.title("2048_game 请使用键盘上的上下左右键操作")
         self.game_size = 4
         self.cell_size = 100
         self.colors = {
@@ -29,7 +29,7 @@ class Game2048:
 
     def init_gui(self):
         # Score display
-        self.score_label = tk.Label(self.root, text="Score: 0", font=("Arial", 14))
+        self.score_label = tk.Label(self.root, text="分数: 0", font=("Arial", 14))
         self.score_label.grid(row=0, column=0, columnspan=self.game_size)
 
         # Game grid
@@ -72,7 +72,7 @@ class Game2048:
                 color = self.colors.get(value, "#000000")
                 self.cells[i][j].config(text=str(value) if value else "", 
                                       bg=color, fg="#776e65" if value < 8 else "#f9f6f2")
-        self.score_label.config(text=f"Score: {self.score}")
+        self.score_label.config(text=f"分数: {self.score}")
         self.root.update()
 
     def move(self, direction):
@@ -120,11 +120,11 @@ class Game2048:
             self.add_new_tile()
             self.update_gui()
             if self.check_game_over():
-                messagebox.showinfo("Game Over", f"Final Score: {self.score}")
+                messagebox.showinfo("游戏结束", f"最终得分: {self.score}")
                 self.start_game()
         else:
             if self.check_game_over():
-                messagebox.showinfo("Game Over", f"Final Score: {self.score}")
+                messagebox.showinfo("游戏结束", f"最终得分: {self.score}")
                 self.start_game()
 
     def merge(self, row):
