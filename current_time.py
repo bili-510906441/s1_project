@@ -1,16 +1,9 @@
 import tkinter as tk
 from datetime import datetime
-from current_time_settings import *
 
-if reset_to_default == True:
-    import base64
-    with open('current_time_settings.py', 'r+', encoding='utf-8') as f:
-        f.seek(0)
-        f.truncate()
-        default_text = 'IyDov5nmmK9jdXJyZW50X3RpbWUucHnnmoTphY3nva7mlofku7YKIyBDb25maWd1cmF0aW9ucwoKZm9udF9zaXplID0gNDAKcmVmcmVzaF90aW1lID0gMTAwMAp3aW5kb3dfdG9wbW9zdCA9IFRydWUKcmVzZXRfdG9fZGVmYXVsdCA9IEZhbHNl'
-        decoded_text = base64.b64decode(default_text).decode('utf-8')
-        f.write(decoded_text)
-    raise SystemExit
+font_size = 30
+refresh_time = 1000
+window_topmost = True
     
 def update_time():
     now = datetime.now()
