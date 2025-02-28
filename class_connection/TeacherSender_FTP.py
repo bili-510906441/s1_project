@@ -1,4 +1,5 @@
 # ============== 教师发送端 TeacherSender.py ==============
+# ======== 由于无需使用FTP进行连接，此代码不再进行维护。 =========
 import tkinter as tk
 from tkinter import messagebox
 import base64

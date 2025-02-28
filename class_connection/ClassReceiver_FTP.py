@@ -1,4 +1,5 @@
-# ============== 班级接收端 ClassReceiver.py ==============
+# ============== 班级接收端 ClassReceiver_FTP.py ==============
+# ======== 由于无需使用FTP进行连接，此代码不再进行维护。 =========
 import tkinter as tk
 import base64
 import hashlib
