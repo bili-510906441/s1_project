@@ -170,5 +170,6 @@ class Game2048:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    root.resizable(0, 0)
     game = Game2048(root)
     root.mainloop()
