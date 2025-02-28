@@ -5,7 +5,7 @@ import random
 class Game2048:
     def __init__(self, root):
         self.root = root
-        self.root.title("2048_game 请使用键盘上的上下左右键操作")
+        self.root.title("2048_game Press ↑ ↓ ← → to play")
         self.game_size = 4
         self.cell_size = 100
         self.colors = {
