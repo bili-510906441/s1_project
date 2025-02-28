@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 # 初始化模型和分词器
-model_name = "D:\Deepseek-R1"  # 可替换为您选择的模型
+model_name = r"D:\Deepseek-R1"  # 可替换为您选择的模型
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
