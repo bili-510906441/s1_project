@@ -28,7 +28,7 @@ class Game2048:
         self.start_game()
 
     def init_gui(self):
-        # Score display
+        # 显示分数
         self.score_label = tk.Label(self.root, text="分数: 0", font=("Arial", 14))
         self.score_label.grid(row=0, column=0, columnspan=self.game_size)
 
