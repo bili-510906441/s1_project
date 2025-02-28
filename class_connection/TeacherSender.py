@@ -11,8 +11,8 @@ class TeacherApp:
         self.window = tk.Tk()
         self.window.title("教师信息发送端")
         
-        # 文件路径配置（示例路径）
-        self.file_path = r"Z:\班级消息\message.dat"
+        # 配置网络文件路径（需修改为实际路径）
+        self.file_path = r"E:\班级消息\message.dat"
         
         self.setup_ui()
         
@@ -31,24 +31,27 @@ class TeacherApp:
             return
         
         try:
-            # 获取当前时间
+            # 生成时间戳
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
             # Base64编码
-            encoded = base64.b64encode(message.encode()).decode()
+            encoded = base64.b64encode(message.encode('utf-8')).decode('utf-8')
             
-            # 计算哈希（包含时间戳）
-            data_to_hash = f"{encoded}{timestamp}".encode()
+            # 计算哈希值（包含时间戳）
+            data_to_hash = f"{encoded}{timestamp}".encode('utf-8')
             sha256_hash = hashlib.sha256(data_to_hash).hexdigest()
             
             # 写入文件
-            with open(self.file_path, "w") as f:
+            with open(self.file_path, "w", encoding='utf-8') as f:
                 f.write(f"{encoded}\n{sha256_hash}\n{timestamp}")
-                    
+                
             messagebox.showinfo("成功", "消息已安全发送")
             self.msg_entry.delete(0, tk.END)
+            
         except Exception as e:
-            messagebox.showerror("错误", f"发送失败: {str(e)}")
+            error_msg = f"发送失败：\n{str(e)}"
+            messagebox.showerror("错误", error_msg)
+            print(f"DEBUG - 异常详情：\n{repr(e)}")
 
     def run(self):
         self.window.mainloop()
